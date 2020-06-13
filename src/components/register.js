@@ -58,7 +58,7 @@ const Register = ({ className }) => {
         <button
           type="submit"
           disabled={state === "submitting"}
-          className="w-full sm:w-auto sm:ml-3 flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+          className="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-3 flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
         >
           {state === "submitting" ? "Subscribing..." : "Subscribe"}
         </button>
