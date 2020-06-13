@@ -3,6 +3,7 @@ import React, { useState } from "react"
 const Register = ({ className }) => {
   const [state, setState] = useState("initial")
   const [error, setError] = useState(null)
+  const [email, setEmail] = useState("")
 
   return (
     <form
@@ -17,7 +18,7 @@ const Register = ({ className }) => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({}),
+          body: JSON.stringify({ email }),
         })
 
         try {
@@ -50,6 +51,8 @@ const Register = ({ className }) => {
           type="email"
           placeholder="jon.appleseed@apple.com"
           required
+          value={email}
+          onChange={e => setEmail(e.target.value)}
           className="appearance-none w-full p-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:max-w-xs"
         />
         <button
@@ -63,6 +66,11 @@ const Register = ({ className }) => {
       {state === "error" && (
         <div className="mt-4 bg-red-100 rounded-md p-3 text-red-700 text-sm">
           {error}
+        </div>
+      )}
+      {state === "success" && (
+        <div className="mt-4 bg-green-100 rounded-md p-3 text-green-700 text-sm">
+          Thanks for subscribing, you have been added to the list 🤘
         </div>
       )}
     </form>
