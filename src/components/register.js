@@ -24,7 +24,7 @@ const Register = ({ className }) => {
         try {
           const json = await res.json()
 
-          if (res.status === 200) {
+          if (res.status === 201) {
             console.log("Great success...", json)
             setState("success")
           } else {
