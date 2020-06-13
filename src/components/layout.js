@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
         <Link to="/" className="text-xl font-extrabold text-gray-900 mr-3">
           {data.site.siteMetadata.title}
         </Link>
-        <span class="inline-flex items-center px-2 rounded-full text-sm font-medium leading-5 bg-green-200 text-green-800">
+        <span className="inline-flex items-center px-2 rounded-full text-sm font-medium leading-5 bg-green-200 text-green-800">
           Coming soon
         </span>
       </div>

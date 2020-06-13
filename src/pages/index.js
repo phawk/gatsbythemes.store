@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Paragraph from "../components/paragraph"
+import Register from "../components/register"
 
 const IndexPage = () => (
   <Layout>
@@ -35,6 +36,8 @@ const IndexPage = () => (
       Register your interest below to be the first to know when we launch and
       get special launch day offers.
     </Paragraph>
+
+    <Register className="mt-8" />
   </Layout>
 )
 
