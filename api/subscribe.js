@@ -15,6 +15,7 @@ export default async (req, res) => {
     const data = {
       email_address: email,
       status: "subscribed",
+      tags: ["gatsbythemes"],
     }
 
     const response = await fetch(
