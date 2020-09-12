@@ -4,6 +4,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Clickoutside from "@phawk/react-clickoutside-component"
 
+import * as routes from "../utils/routes"
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -24,38 +26,38 @@ const Layout = ({ children }) => {
           <div className="flex justify-between h-16">
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
-                <Link to={"/"} className="font-bold text-gray-900">
+                <Link to={routes.ROOT} className="font-bold text-gray-900">
                   {data.site.siteMetadata.title}
                 </Link>
               </div>
               <div className="hidden sm:-my-px sm:ml-6 space-x-8 sm:flex">
-                <a
-                  href="#"
+                <Link
+                  to={routes.ROOT}
                   className="inline-flex items-center px-1 pt-1 border-b-2 border-indigo-500 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out"
                 >
                   Home
-                </a>
+                </Link>
 
-                <a
-                  href="#"
+                <Link
+                  to={routes.THEMES}
                   className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
                 >
                   Themes
-                </a>
+                </Link>
 
-                <a
-                  href="#"
+                <Link
+                  to={routes.DOCS}
                   className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
                 >
                   Docs
-                </a>
+                </Link>
 
-                <a
-                  href="#"
+                <Link
+                  to={routes.SUBMIT}
                   className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
                 >
                   Submit
-                </a>
+                </Link>
               </div>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:items-center">
@@ -103,14 +105,7 @@ const Layout = ({ children }) => {
                           href="#"
                           className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
                         >
-                          Your Profile
-                        </a>
-
-                        <a
-                          href="#"
-                          className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-                        >
-                          Settings
+                          Account
                         </a>
 
                         <a
@@ -171,33 +166,33 @@ const Layout = ({ children }) => {
         {mobileMenuOpen && (
           <div className="sm:hidden">
             <div className="pt-2 pb-3 space-y-1">
-              <a
-                href="#"
+              <Link
+                to={routes.ROOT}
                 className="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out"
               >
                 Home
-              </a>
+              </Link>
 
-              <a
-                href="#"
+              <Link
+                to={routes.THEMES}
                 className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
               >
                 Themes
-              </a>
+              </Link>
 
-              <a
-                href="#"
+              <Link
+                to={routes.DOCS}
                 className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
               >
                 Docs
-              </a>
+              </Link>
 
-              <a
-                href="#"
+              <Link
+                to={routes.SUBMIT}
                 className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
               >
                 Submit
-              </a>
+              </Link>
             </div>
             <div className="pt-4 pb-3 border-t border-gray-200">
               <div className="flex items-center px-4 space-x-3">
@@ -228,15 +223,7 @@ const Layout = ({ children }) => {
                   className="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
                   role="menuitem"
                 >
-                  Your Profile
-                </a>
-
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:text-gray-800 focus:bg-gray-100 transition duration-150 ease-in-out"
-                  role="menuitem"
-                >
-                  Settings
+                  Account
                 </a>
 
                 <a

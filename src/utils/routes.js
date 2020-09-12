@@ -1,2 +1,5 @@
 export const ROOT = "/"
+export const THEMES = "/themes"
+export const DOCS = "/docs"
+export const SUBMIT = "/submit"
 export const PRIVACY = "/privacy"

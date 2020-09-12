@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Paragraph from "../components/paragraph"
 import Register from "../components/register"
+import Technologies from "../components/technologies"
 
 const IndexPage = () => (
   <Layout>
@@ -25,9 +26,7 @@ const IndexPage = () => (
         </h1>
 
         <Paragraph className="lg:text-xl">
-          A collection of production ready Gatsby themes for common use-cases,
-          each theme will be integrated with popular headless CMS’s, payments
-          providers or e-commerce tools.
+          A collection of production ready Gatsby themes for common use-cases.
         </Paragraph>
 
         <Register className="mt-8" />
@@ -38,6 +37,8 @@ const IndexPage = () => (
         <div className="bg-teal-500 rounded-lg h-64"></div>
       </div>
     </div>
+
+    <Technologies />
   </Layout>
 )
 
