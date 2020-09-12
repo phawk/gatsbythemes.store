@@ -1,4 +1,7 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
+
+import * as routes from "../utils/routes"
 
 const Register = ({ className }) => {
   const [state, setState] = useState("initial")
@@ -7,7 +10,7 @@ const Register = ({ className }) => {
 
   return (
     <form
-      className={`bg-gray-100 rounded-md p-4 md:px-6 md:py-5 ${className}`}
+      className={`${className}`}
       onSubmit={async e => {
         e.preventDefault()
 
@@ -41,9 +44,7 @@ const Register = ({ className }) => {
         }
       }}
     >
-      <span className="text-lg font-medium text-gray-900">
-        Subscribe for updates
-      </span>
+      <span className="text-lg text-gray-900">Subscribe for updates</span>
 
       <div className="mt-3 sm:flex">
         <input
@@ -73,6 +74,14 @@ const Register = ({ className }) => {
           Thanks for subscribing, you have been added to the list 🤘
         </div>
       )}
+
+      <span className="block mt-2 text-gray-500 text-sm">
+        We care about the protection of your data. Read our{" "}
+        <Link to={routes.PRIVACY} className="text-gray-800 underline">
+          Privacy Policy
+        </Link>
+        .
+      </span>
     </form>
   )
 }

@@ -9,35 +9,35 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Beautiful full-featured themes for Gatsby.js" />
 
-    <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-8 leading-snug">
-      Beautiful, full-featured themes to kick-start your next{" "}
-      <a
-        href="https://www.gatsbyjs.org/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline text-indigo-600"
-      >
-        Gatsby.js
-      </a>{" "}
-      project.
-    </h1>
+    <div className="md:grid md:grid-cols-12 md:gap-8">
+      <div className="md:col-span-7 xl:col-span-6">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-snug">
+          Beautiful, full-featured themes to kick-start your next{" "}
+          <a
+            href="https://www.gatsbyjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-indigo-600"
+          >
+            Gatsby.js
+          </a>{" "}
+          project.
+        </h1>
 
-    <Paragraph>
-      We’re developing a collection of production ready Gatsby themes for common
-      use-cases.
-    </Paragraph>
+        <Paragraph className="lg:text-xl">
+          A collection of production ready Gatsby themes for common use-cases,
+          each theme will be integrated with popular headless CMS’s, payments
+          providers or e-commerce tools.
+        </Paragraph>
 
-    <Paragraph>
-      Depending on the use case, each theme will be integrated with popular
-      headless CMS’s, payments providers and e-commerce systems.
-    </Paragraph>
+        <Register className="mt-8" />
+      </div>
 
-    <Paragraph>
-      Register your interest below to be the first to know when we launch and
-      get special launch day offers.
-    </Paragraph>
-
-    <Register className="mt-8" />
+      <div className="mt-8 md:mt-0 md:col-span-5 xl:col-start-8">
+        {/* Image placeholder */}
+        <div className="bg-teal-500 rounded-lg h-64"></div>
+      </div>
+    </div>
   </Layout>
 )
 
