@@ -25,10 +25,6 @@ const IndexPage = () => (
           project.
         </h1>
 
-        <Paragraph className="lg:text-xl">
-          A collection of production ready Gatsby themes for common use-cases.
-        </Paragraph>
-
         <Register className="mt-8" />
       </div>
 

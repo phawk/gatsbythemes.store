@@ -5,6 +5,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Clickoutside from "@phawk/react-clickoutside-component"
 
 import * as routes from "../utils/routes"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -253,6 +254,8 @@ const Layout = ({ children }) => {
           </div>
         </main>
       </div>
+
+      <Footer />
     </div>
   )
 }
